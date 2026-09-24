@@ -925,9 +925,38 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.75);
 }
 .plano__nome { font-family: var(--font-display); font-size: 1.28rem; color: var(--creme-100); }
-.plano__preco { font-family: var(--font-display); font-size: 2.7rem; line-height: 0.95; color: var(--ouro-400); }
-.plano__preco sup { font-size: 1rem; top: -0.9em; margin-right: 3px; }
-.plano__preco small { font-family: var(--font-body); font-size: 0.72rem; font-weight: 700; color: var(--txt-mute); letter-spacing: 0.06em; display: block; margin-top: 9px; }
+/* O preço é UMA unidade visual: R$ + valor + centavos na mesma linha.
+   Como unidade flex, as três partes ficam alinhadas pela base e nunca
+   quebram entre si; a legenda (por pessoa, etc.) é que desce. */
+.plano__preco {
+  font-family: var(--font-display);
+  font-size: 2.7rem;
+  line-height: 0.95;
+  color: var(--ouro-400);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 3px;
+  white-space: nowrap;
+}
+.plano__preco sup { font-size: 1rem; top: 0; margin-right: 0; }
+/* centavos: mesma linha do valor, menores e na base */
+.plano__preco .cent {
+  font-size: 1rem;
+  line-height: 1;
+  align-self: flex-end;
+  margin-bottom: 0.16em;
+}
+/* a legenda ("por pessoa", "sazonal") vem DEPOIS do preço, em linha própria */
+.plano__legenda {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--txt-mute);
+  letter-spacing: 0.06em;
+  margin-top: -5px;
+}
 .plano__preco--texto { font-size: 1.8rem; line-height: 1.1; }
 .plano ul { display: flex; flex-direction: column; gap: 9px; flex: 1; margin-block: 2px; }
 .plano li { display: flex; gap: 10px; font-size: 0.85rem; color: var(--txt-dim); align-items: flex-start; }
@@ -978,6 +1007,9 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   background: linear-gradient(150deg, var(--carvao-800), var(--carvao-900));
   border: 1px solid var(--linha);
 }
+/* reputação: no desktop o selo e o parágrafo ficam lado a lado (como estava);
+   no celular eles empilham — ver @media 620px, onde a coluna estreita
+   fazia o texto passar por cima do selo */
 .aval__nota { display: flex; align-items: center; gap: 15px; }
 .aval__big {
   font-family: var(--font-display);
@@ -1081,6 +1113,46 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .mapa__pino b { display: block; font-family: var(--font-display); font-size: 1.45rem; color: var(--creme-100); }
 .mapa__pino span { display: block; font-size: 0.86rem; color: var(--txt-dim); margin-top: 5px; }
 .mapa__pino .btn { margin-top: 20px; }
+
+/* --- LOCAL, na seção clara ---------------------------------------------
+   Os cards de contato foram desenhados para o fundo carvão: texto creme e
+   borda dourada translúcida. Sobre o fundo creme eles ficavam lavados, com
+   o título quase invisível. Aqui a cor é trocada por valor sólido — nada de
+   opacity no container, que apagaria texto e ícone junto. --------------- */
+.secao--creme .local__item {
+  background: #fff;
+  border-color: rgba(36, 26, 17, 0.12);
+  box-shadow: 0 12px 28px -22px rgba(60, 40, 20, 0.55);
+}
+.secao--creme .local__item:hover {
+  border-color: rgba(200, 16, 46, 0.34);
+  background: #fff;
+}
+.secao--creme .local__item b { color: #6d5c49; }
+.secao--creme .local__item span { color: #241a11; }
+.secao--creme .local__item small { color: #6d5c49; }
+.secao--creme .local__ico {
+  background: linear-gradient(140deg, rgba(18, 148, 74, 0.14), rgba(200, 16, 46, 0.12));
+  border-color: rgba(36, 26, 17, 0.12);
+}
+/* o ícone dourado sumia no creme: aqui ele usa o vermelho da casa */
+.secao--creme .local__ico svg { color: var(--vermelho-500); }
+
+/* marcador do mapa: mesma correção, com fundo claro e contraste real */
+.secao--creme .mapa {
+  border-color: rgba(36, 26, 17, 0.12);
+  background:
+    linear-gradient(160deg, rgba(18, 148, 74, 0.07), rgba(200, 16, 46, 0.07)),
+    #fff;
+}
+.secao--creme .mapa__grafo {
+  opacity: 0.55;
+  background-image:
+    linear-gradient(rgba(36, 26, 17, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(36, 26, 17, 0.1) 1px, transparent 1px);
+}
+.secao--creme .mapa__pino b { color: #241a11; }
+.secao--creme .mapa__pino span { color: #6d5c49; }
 
 /* ---------- 13. CARRINHO + PEDIDO ---------- */
 .carrinho {
@@ -1378,32 +1450,16 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 }
 .barra-mob .btn { flex: 1; min-height: 48px; }
 
-/* toast */
-.toast {
-  position: fixed;
-  left: 50%;
-  bottom: 26px;
-  z-index: 200;
-  transform: translate(-50%, 130%);
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 13px 20px;
-  border-radius: 999px;
-  background: var(--creme-100);
-  color: #241a11;
-  font-size: 0.86rem;
-  font-weight: 700;
-  box-shadow: 0 24px 48px -18px rgba(0, 0, 0, 0.9);
-  transition: transform 0.5s var(--ease-out);
-  max-width: calc(100vw - 32px);
-}
-.toast.on { transform: translate(-50%, 0); }
-.toast svg { width: 19px; height: 19px; color: var(--verde-500); flex: none; }
-.toast span {
-  min-width: 0;
+/* aviso para leitores de tela: anuncia sem desenhar nada na tela.
+   Substitui o antigo balão "Item adicionado", que cobria a barra do celular. */
+.so-leitor {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  border: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   white-space: nowrap;
 }
 
@@ -1455,7 +1511,9 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .burger svg { width: 21px; height: 21px; }
   .barra-mob { display: flex; }
   .hero__rolar { display: none; }
-  body { padding-bottom: 76px; }
+  /* a barra cresce com a safe-area do iPhone: a reserva de espaço acompanha,
+     senão ela cobriria o fim do conteúdo em aparelhos com barra inferior */
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
   .rodape__base { flex-direction: column; align-items: flex-start; }
 }
 
@@ -1484,7 +1542,10 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .pos__estrelas button { width: 40px; height: 40px; }
   .pos__estrelas button svg { width: 30px; height: 30px; }
   .pos__cta .btn { flex: 1 1 100%; }
-  .toast { bottom: 78px; }
+  /* REPUTAÇÃO no celular: selo e parágrafo empilham, com respiro entre eles.
+     Antes ficavam lado a lado e o texto invadia o selo do Google. */
+  .aval__nota { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .aval__meta { margin-top: 0; max-width: 100%; }
 }
 
 @media (max-width: 430px) {

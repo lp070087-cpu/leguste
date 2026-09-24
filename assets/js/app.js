@@ -63,16 +63,26 @@
   }
   observar($$('.rev'));
 
-  /* ------------------------------------------------------------- TOAST */
-  var toast = $('#toast');
-  var toastTxt = $('#toastTxt');
-  var toastTimer = null;
+  /* ------------------------------------------------------------- AVISOS
+     O balão flutuante "Item adicionado" foi REMOVIDO a pedido da casa: ele
+     cobria a barra fixa do celular. O aviso agora vai para uma região
+     aria-live que não aparece na tela, mantendo o feedback para leitores
+     de tela sem desenhar nada por cima do conteúdo. */
+  var aviso = $('#aviso');
+  if (!aviso) {
+    aviso = document.createElement('p');
+    aviso.id = 'aviso';
+    aviso.className = 'so-leitor';
+    aviso.setAttribute('role', 'status');
+    aviso.setAttribute('aria-live', 'polite');
+    document.body.appendChild(aviso);
+  }
+  var avisoTimer = null;
   function mostrarToast(msg) {
-    if (!toast) return;
-    toastTxt.textContent = msg;
-    toast.classList.add('on');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { toast.classList.remove('on'); }, 2300);
+    if (!aviso) return;
+    aviso.textContent = msg;
+    clearTimeout(avisoTimer);
+    avisoTimer = setTimeout(function () { aviso.textContent = ''; }, 2300);
   }
 
   /* ------------------------------------------------------------ CARRINHO */

@@ -216,7 +216,7 @@
         </div>
         <span class="rotulo">À la carte</span>
         <h3 class="plano__nome">Pizza Maracanã</h3>
-        <div class="plano__preco"><sup>R$</sup>59<small>,99</small></div>
+        <div class="plano__preco"><sup>R$</sup>59<span class="cent">,99</span></div>
         <ul>
           <li><svg><use href="#i-check"/></svg> Pizza grande da casa</li>
           <li><svg><use href="#i-check"/></svg> Massa de sua escolha</li>
@@ -232,7 +232,7 @@
         </div>
         <span class="rotulo">Combo</span>
         <h3 class="plano__nome">Maracanã + Pizza Média</h3>
-        <div class="plano__preco"><sup>R$</sup>86<small>,90</small></div>
+        <div class="plano__preco"><sup>R$</sup>86<span class="cent">,90</span></div>
         <ul>
           <li><svg><use href="#i-check"/></svg> <b>1 Pizza Maracanã</b></li>
           <li><svg><use href="#i-check"/></svg> 1 pizza média doce <i>ou</i> mussarela</li>
@@ -248,7 +248,8 @@
         </div>
         <span class="rotulo">Rodízio</span>
         <h3 class="plano__nome">Rodízio da Cerâmica</h3>
-        <div class="plano__preco plano__preco--texto">Consulte<small>por pessoa · sazonal</small></div>
+        <div class="plano__preco plano__preco--texto">Consulte</div>
+        <small class="plano__legenda">por pessoa · sazonal</small>
         <ul>
           <li><svg><use href="#i-check"/></svg> Pizzas salgadas e doces</li>
           <li><svg><use href="#i-check"/></svg> +40 sabores tradicionais</li>
@@ -537,12 +538,6 @@
 
   <div class="carrinho__pé" id="carrinhoPé" hidden></div>
 </aside>
-
-<!-- toast -->
-<div class="toast" id="toast" role="status" aria-live="polite">
-  <svg><use href="#i-check"/></svg>
-  <span id="toastTxt">Item adicionado</span>
-</div>
 
 <script src="assets/js/menu.js"></script>
 <script src="assets/js/app.js"></script>
