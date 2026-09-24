@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leguste Pizzaria — O melhor rodízio da Cerâmica | Nova Iguaçu</title>
+<meta name="description" content="Leguste Pizzaria — pizzaria e restaurante na Cerâmica, Nova Iguaçu. Rodízio de pizzas salgadas e doces, mais de 40 sabores, 3 tipos de massa. Rua Geni Saraiva, 1430.">
+<meta name="theme-color" content="#0d0a08">
+<meta property="og:title" content="Leguste Pizzaria — Nova Iguaçu">
+<meta property="og:description" content="O melhor rodízio da Cerâmica. Pizzas salgadas e doces, mais de 40 sabores tradicionais.">
+<meta property="og:image" content="assets/img/ambiente-google.jpg">
+<link rel="icon" href="assets/img/logo-leguste.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= SVG SPRITE ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-pizza" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 21 19.2A19 19 0 0 1 3 19.2Z"/><circle cx="12" cy="9" r="1.3" fill="currentColor" stroke="none"/><circle cx="8.4" cy="15.4" r="1.3" fill="currentColor" stroke="none"/><circle cx="15.6" cy="15.4" r="1.3" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4A2 2 0 0 0 9.6 17h8.7a2 2 0 0 0 2-1.6L22 7H6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2l-5-4.9 6.9-1z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="2.8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2"/></symbol>
+    <symbol id="i-hora" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-fogo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1.5 4 5 5 5 9a5 5 0 0 1-10 0c0-1.6.6-2.8 1.4-3.8-.2 2 .8 3 1.6 3.3C9.6 8 10.8 5 12 2"/></symbol>
+    <symbol id="i-moto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="18" r="3"/><circle cx="19" cy="18" r="3"/><path d="M8 18h8l-2-6h-3l-3-4H5"/></symbol>
+    <symbol id="i-folha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 6-10 16-10 0 10-4 16-9 16"/><path d="M4 21c1-5 4-9 8-11"/></symbol>
+    <symbol id="i-grupo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V19"/><circle cx="9" cy="7" r="3.4"/><path d="M22 19v-1.5a4 4 0 0 0-3-3.8"/><path d="M16 4.1a3.4 3.4 0 0 1 0 6.6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.7"/><path d="M17.4 6.6h.01"/></symbol>
+    <symbol id="i-whats" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2m0 1.8a8.2 8.2 0 1 1-4.3 15.1l-.4-.2-2.7.8.8-2.6-.2-.4A8.2 8.2 0 0 1 12 3.8m-3 4c-.2 0-.5.1-.7.4-.3.3-.9 1-.9 2s.7 2 .8 2.2c.1.1 1.4 2.2 3.5 3 1.7.7 2.2.6 2.6.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-1.5-.7c-.2-.1-.4-.1-.5.1l-.6.8c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3 0-.5l-.7-1.6c-.1-.3-.3-.3-.4-.3z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5M9 13h6M9 17h4"/></symbol>
+    <symbol id="i-copo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.4 17.1A2 2 0 0 1 14.6 22H9.4a2 2 0 0 1-2-1.9z"/><path d="M5.4 8h13.2"/></symbol>
+  </defs>
+</svg>
+
+<!-- ================= TOPO ================= -->
+<header class="topo" id="topo">
+  <div class="topo__in">
+    <a class="marca" href="#inicio" aria-label="Leguste Pizzaria — início">
+      <img class="marca__logo" src="assets/img/logo-leguste.png" alt="Logotipo Leguste Pizzaria" width="44" height="44">
+      <span class="marca__txt">
+        <span class="marca__nome">Leguste</span>
+        <span class="marca__sub">Pizzaria</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#rodizio">Rodízio</a>
+      <a href="#experiencia">A Casa</a>
+      <a href="#local">Localização</a>
+      <a href="#avaliar">Avaliar</a>
+    </nav>
+
+    <div class="acoes-topo">
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <svg><use href="#i-menu"/></svg>
+      </button>
+      <button class="carrinho-btn" id="abrirCarrinho" aria-label="Abrir carrinho de pedidos">
+        <svg><use href="#i-cart"/></svg>
+        <span class="carrinho-btn__n" id="contador" aria-live="polite">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="hero__midia">
+    <img src="assets/img/ambiente-servindo.jpg" alt="Pizza artesanal da Leguste sendo servida à mesa" fetchpriority="high">
+  </div>
+  <div class="hero__veu"></div>
+  <div class="hero__grao"></div>
+
+  <div class="hero__in">
+    <div class="hero__txt">
+      <span class="hero__selo rev"><i>🇮🇹</i> Nova Iguaçu · Cerâmica</span>
+
+      <h1 class="rev" style="--d:70ms">O melhor <em>rodízio</em> da Cerâmica</h1>
+
+      <p class="hero__lead rev" style="--d:140ms">
+        Pizzas salgadas e doces saindo quentinhas, mais de 40 sabores tradicionais e 3 tipos de massa.
+        Ambiente acolhedor para a família toda — na Leguste, pizza é coisa séria.
+      </p>
+
+      <div class="hero__cta rev" style="--d:210ms">
+        <a class="btn" href="#cardapio"><svg><use href="#i-pizza"/></svg> Ver o cardápio</a>
+        <a class="btn btn--vazio" href="https://wa.me/5521992543326?text=Ol%C3%A1%2C%20Leguste!%20Quero%20reservar%20uma%20mesa." target="_blank" rel="noopener"><svg><use href="#i-whats"/></svg> Reservar mesa</a>
+      </div>
+
+      <div class="hero__fatos rev" style="--d:280ms">
+        <div class="fato"><div class="fato__n">+40</div><div class="fato__r">Sabores</div></div>
+        <div class="fato"><div class="fato__n">3</div><div class="fato__r">Tipos de massa</div></div>
+        <div class="fato"><div class="fato__n">Salgadas<br>+ doces</div><div class="fato__r">No rodízio</div></div>
+      </div>
+    </div>
+
+    <div class="hero__palco rev" style="--d:120ms">
+      <span class="hero__halo"></span>
+      <span class="hero__anel"></span>
+      <span class="hero__anel hero__anel--b"></span>
+      <div class="hero__disco">
+        <img src="assets/img/hero-pizza.jpg" alt="Pizza inteira de pepperoni da Leguste" width="900" height="1125">
+      </div>
+
+      <div class="hero__tag"><svg><use href="#i-fogo"/></svg> Forno quente desde cedo</div>
+      <div class="hero__preco">
+        <b>R$ 59,99</b>
+        <span>Pizza Maracanã</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="hero__rolar">Role <i></i></span>
+</section>
+
+<!-- ================= FAIXA ================= -->
+<div class="faixa" aria-hidden="true">
+  <div class="faixa__trilha">
+    <div class="faixa__item"><svg><use href="#i-pizza"/></svg> Pizzas salgadas e doces</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-fogo"/></svg> Rodízio da Cerâmica</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-folha"/></svg> +40 sabores tradicionais</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-grupo"/></svg> Ambiente acolhedor</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-moto"/></svg> iFood e 99Food</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-pizza"/></svg> 3 tipos de massa</div><span class="faixa__pt"></span>
+    <!-- duplicado para o loop contínuo -->
+    <div class="faixa__item"><svg><use href="#i-pizza"/></svg> Pizzas salgadas e doces</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-fogo"/></svg> Rodízio da Cerâmica</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-folha"/></svg> +40 sabores tradicionais</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-grupo"/></svg> Ambiente acolhedor</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-moto"/></svg> iFood e 99Food</div><span class="faixa__pt"></span>
+    <div class="faixa__item"><svg><use href="#i-pizza"/></svg> 3 tipos de massa</div><span class="faixa__pt"></span>
+  </div>
+</div>
+
+<!-- ================= CARDÁPIO ================= -->
+<section class="secao secao--creme" id="cardapio">
+  <div class="container">
+    <div class="cabeca rev">
+      <span class="rotulo">Cardápio Leguste</span>
+      <h2>Escolha a sua <span class="vermelho-txt">favorita</span></h2>
+      <div class="filete"></div>
+      <p>Do clássico mussarela às combinações da casa. Monte seu pedido e veja o resumo do carrinho em tempo real.</p>
+    </div>
+
+    <div class="filtros rev" id="filtros" role="tablist" aria-label="Filtrar cardápio"></div>
+    <div class="grade" id="grade"></div>
+
+    <div class="nota rev">
+      <svg><use href="#i-info"/></svg>
+      <p><b>Simulação de pedido.</b> Esta página é uma apresentação front-end: os itens escolhidos não são enviados a nenhum sistema. Os valores exibidos têm como referência o material oficial da Leguste — para o cardápio e preços do dia, fale com a gente pelo WhatsApp <b>(21) 99254-3326</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RODÍZIO ================= -->
+<section class="secao rodizio" id="rodizio">
+  <div class="container">
+    <div class="rodizio__grade">
+      <figure class="rodizio__foto rev">
+        <img src="assets/img/ambiente-mesa.jpg" alt="Mesa servida com pizzas no rodízio da Leguste" loading="lazy">
+        <span class="rodizio__selo">Faça sua<br>reserva</span>
+        <figcaption>Rodízio servido no salão — chegue com fome.</figcaption>
+      </figure>
+
+      <div>
+        <div class="cabeca rev" style="--d:60ms">
+          <span class="rotulo">Rodízio de pizzas</span>
+          <h2>O melhor rodízio da <span class="ouro-txt">Cerâmica</span></h2>
+          <div class="filete"></div>
+          <p>Rodízio completo de pizzas salgadas e doces, com mais de 40 sabores tradicionais, 3 tipos de massa e atendimento feito para reunir a família.</p>
+        </div>
+
+        <div class="inclusos rev" style="--d:120ms">
+          <div class="incluso">
+            <svg><use href="#i-pizza"/></svg>
+            <div><b>+40 sabores</b><span>Tradicionais da casa</span></div>
+          </div>
+          <div class="incluso">
+            <svg><use href="#i-doc"/></svg>
+            <div><b>Pizzas doces</b><span>Incluídas no rodízio</span></div>
+          </div>
+          <div class="incluso">
+            <svg><use href="#i-fogo"/></svg>
+            <div><b>3 tipos de massa</b><span>Escolha a sua</span></div>
+          </div>
+          <div class="incluso">
+            <svg><use href="#i-grupo"/></svg>
+            <div><b>Ambiente acolhedor</b><span>Salão amplo</span></div>
+          </div>
+        </div>
+
+        <div class="rev" style="--d:180ms; display:flex; gap:12px; flex-wrap:wrap; margin-top:26px">
+          <a class="btn" href="https://wa.me/5521992543326?text=Ol%C3%A1!%20Quero%20informa%C3%A7%C3%B5es%20e%20valor%20do%20rod%C3%ADzio." target="_blank" rel="noopener"><svg><use href="#i-whats"/></svg> Valor e reserva no WhatsApp</a>
+          <a class="btn btn--vazio" href="tel:+5521971176835"><svg><use href="#i-phone"/></svg> (21) 97117-6835</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="planos">
+      <article class="plano rev">
+        <div class="plano__foto">
+          <img src="assets/img/pizza-especial-casa.jpg" alt="Pizza Maracanã da Leguste" loading="lazy" width="760" height="507">
+        </div>
+        <span class="rotulo">À la carte</span>
+        <h3 class="plano__nome">Pizza Maracanã</h3>
+        <div class="plano__preco"><sup>R$</sup>59<small>,99</small></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> Pizza grande da casa</li>
+          <li><svg><use href="#i-check"/></svg> Massa de sua escolha</li>
+          <li><svg><use href="#i-check"/></svg> Retirada ou delivery</li>
+        </ul>
+        <a class="btn btn--vazio btn--bloco" href="#cardapio">Montar no carrinho</a>
+      </article>
+
+      <article class="plano plano--destaque rev" style="--d:80ms">
+        <span class="plano__fit">Mais pedido</span>
+        <div class="plano__foto">
+          <img src="assets/img/combo-duplo.jpg" alt="Combo Maracanã com pizza média da Leguste" loading="lazy" width="760" height="507">
+        </div>
+        <span class="rotulo">Combo</span>
+        <h3 class="plano__nome">Maracanã + Pizza Média</h3>
+        <div class="plano__preco"><sup>R$</sup>86<small>,90</small></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> <b>1 Pizza Maracanã</b></li>
+          <li><svg><use href="#i-check"/></svg> 1 pizza média doce <i>ou</i> mussarela</li>
+          <li><svg><use href="#i-check"/></svg> Exceto banana nevada</li>
+          <li><svg><use href="#i-check"/></svg> Ideal para dois</li>
+        </ul>
+        <a class="btn btn--bloco" href="#cardapio"><svg><use href="#i-pizza"/></svg> Quero esse combo</a>
+      </article>
+
+      <article class="plano rev" style="--d:160ms">
+        <div class="plano__foto">
+          <img src="assets/img/combo-familia.jpg" alt="Rodízio de pizzas da Leguste" loading="lazy" width="760" height="507">
+        </div>
+        <span class="rotulo">Rodízio</span>
+        <h3 class="plano__nome">Rodízio da Cerâmica</h3>
+        <div class="plano__preco plano__preco--texto">Consulte<small>por pessoa · sazonal</small></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg> Pizzas salgadas e doces</li>
+          <li><svg><use href="#i-check"/></svg> +40 sabores tradicionais</li>
+          <li><svg><use href="#i-check"/></svg> Servido no salão</li>
+        </ul>
+        <a class="btn btn--verde btn--bloco" href="https://wa.me/5521992543326?text=Ol%C3%A1!%20Quero%20o%20valor%20do%20rod%C3%ADzio%20da%20Cer%C3%A2mica." target="_blank" rel="noopener"><svg><use href="#i-whats"/></svg> Consultar valor</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIÊNCIA ================= -->
+<section class="secao" id="experiencia">
+  <div class="container container-largo">
+    <div class="cabeca cabeca--centro rev">
+      <span class="rotulo">A experiência Leguste</span>
+      <h2>Mais que pizza, <span class="ouro-txt">um lugar</span></h2>
+      <div class="filete"></div>
+      <p>Um salão feito para juntar gente. Pizzas quentinhas, atendimento próximo e aquele cheirinho de forno que chega antes de você sentar.</p>
+    </div>
+
+    <div class="exp__grade">
+      <figure class="exp__cx exp__cx--alto exp__cx--largo rev">
+        <img src="assets/img/ambiente-google.jpg" alt="Pizzaiolo da Leguste com pizza saindo do forno" loading="lazy">
+        <figcaption>
+          <h3>Forno quente, pizza na hora</h3>
+          <p>Massa de fermentação cuidadosa e recheio generoso — do forno direto para a sua mesa.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="exp__cx rev" style="--d:70ms">
+        <img src="assets/img/ambiente-equipe.jpg" alt="Equipe da Leguste reunida no salão" loading="lazy">
+        <figcaption>
+          <h3>Time da casa</h3>
+          <p>Atendimento de quem gosta do que faz.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="exp__cx rev" style="--d:140ms">
+        <img src="assets/img/ambiente-salao.jpg" alt="Salão da Leguste Pizzaria" loading="lazy">
+        <figcaption>
+          <h3>Salão amplo</h3>
+          <p>Ideal para famílias e grupos.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="exp__cx rev" style="--d:70ms">
+        <img src="assets/img/ambiente-forno.jpg" alt="Pizza sendo montada na cozinha da Leguste" loading="lazy">
+        <figcaption>
+          <h3>Feito na hora</h3>
+          <p>Montagem artesanal, sem pressa.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="exp__cx rev" style="--d:140ms">
+        <img src="assets/img/pizza-rucula.jpg" alt="Pizza com rúcula fresca da Leguste" loading="lazy">
+        <figcaption>
+          <h3>Finalização fresca</h3>
+          <p>Rúcula e tomate por cima, na hora de servir.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- avaliação / reputação -->
+    <div class="aval rev" id="avaliacoes">
+      <div>
+        <span class="rotulo">Reputação</span>
+        <p class="script ouro-txt" style="font-size:clamp(1.7rem,4vw,2.4rem); line-height:1.12; margin-top:12px">
+          “A melhor pizzaria de Nova Iguaçu”
+        </p>
+        <div class="aval__nota" style="margin-top:16px">
+          <div class="aval__google" aria-hidden="true">
+            <svg viewBox="0 0 24 24" style="width:26px;height:26px"><path fill="#4285F4" d="M23 12.2c0-.8-.1-1.6-.2-2.3H12v4.4h6.2a5.3 5.3 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.5"/><path fill="#34A853" d="M12 23.4c3.1 0 5.7-1 7.6-2.8l-3.7-2.9a7 7 0 0 1-10.4-3.6H1.7v2.9A11.7 11.7 0 0 0 12 23.4"/><path fill="#FBBC05" d="M5.5 14.1a7 7 0 0 1 0-4.5V6.7H1.7a11.7 11.7 0 0 0 0 10.5z"/><path fill="#EA4335" d="M12 4.8c1.7 0 3.2.6 4.4 1.7l3.3-3.3A11.7 11.7 0 0 0 1.7 6.7l3.8 2.9A7 7 0 0 1 12 4.8"/></svg>
+            <b>Avaliações no Google</b>
+          </div>
+          <div class="aval__meta">A nota e os depoimentos oficiais ficam no perfil da Leguste no Google — este site não reproduz números que não vieram da casa.</div>
+        </div>
+        <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn btn--vazio" href="https://www.google.com/search?q=Leguste+Pizzaria+Nova+Igua%C3%A7u" target="_blank" rel="noopener"><svg><use href="#i-star"/></svg> Ver no Google</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="aval__g" style="margin-bottom:16px">
+          <svg style="width:26px;height:26px;color:var(--ouro-400)"><use href="#i-star"/></svg> O que a casa oferece
+        </div>
+
+        <div class="inclusos" style="margin-top:0; grid-template-columns:1fr">
+          <div class="incluso">
+            <svg><use href="#i-pizza"/></svg>
+            <div><b>Rodízio completo</b><span>Pizzas salgadas e doces girando sem parar no salão.</span></div>
+          </div>
+          <div class="incluso">
+            <svg><use href="#i-folha"/></svg>
+            <div><b>+40 sabores tradicionais</b><span>Do clássico mussarela às combinações da casa.</span></div>
+          </div>
+          <div class="incluso">
+            <svg><use href="#i-fogo"/></svg>
+            <div><b>3 tipos de massa</b><span>Tradicional, grossa ou com borda de catupiry.</span></div>
+          </div>
+          <div class="incluso">
+            <svg><use href="#i-moto"/></svg>
+            <div><b>Delivery e retirada</b><span>Peça pelo iFood, 99Food ou retire na loja.</span></div>
+          </div>
+        </div>
+
+        <p class="txt-dim" style="margin-top:18px; font-size:.82rem">
+          O rodízio é o carro-chefe da casa e o que mais aparece nos posts oficiais da Leguste.
+          Horário e valor do dia: confirme com a gente pelo WhatsApp.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOCALIZAÇÃO ================= -->
+<section class="secao secao--creme" id="local">
+  <div class="container">
+    <div class="local">
+      <div class="rev">
+        <span class="rotulo">Venha nos visitar</span>
+        <h2 style="margin-top:12px">Onde a Leguste <span class="vermelho-txt">fica</span></h2>
+        <div class="filete"></div>
+        <p style="margin-top:16px;color:#6d5c49">Estamos na Cerâmica, em Nova Iguaçu. Venha para o salão ou peça pelo delivery dos aplicativos parceiros.</p>
+
+        <div class="local__lista">
+          <div class="local__item">
+            <span class="local__ico"><svg><use href="#i-pin"/></svg></span>
+            <div>
+              <b>Endereço</b>
+              <span>Rua Geni Saraiva, 1430</span>
+              <small>Cerâmica — Nova Iguaçu / RJ</small>
+            </div>
+          </div>
+          <div class="local__item">
+            <span class="local__ico"><svg><use href="#i-phone"/></svg></span>
+            <div>
+              <b>Telefones</b>
+              <span>(21) 99254-3326</span>
+              <small>(21) 97117-6835</small>
+            </div>
+          </div>
+          <div class="local__item">
+            <span class="local__ico"><svg><use href="#i-insta"/></svg></span>
+            <div>
+              <b>Instagram</b>
+              <span>@legustenovaiguacu</span>
+              <small>Novidades, promoções e bastidores</small>
+            </div>
+          </div>
+          <div class="local__item">
+            <span class="local__ico"><svg><use href="#i-moto"/></svg></span>
+            <div>
+              <b>Delivery</b>
+              <span>iFood e 99Food</span>
+              <small>Entrega onde você estiver</small>
+            </div>
+          </div>
+          <div class="local__item">
+            <span class="local__ico"><svg><use href="#i-hora"/></svg></span>
+            <div>
+              <b>Funcionamento</b>
+              <span>Consulte o horário do dia</span>
+              <small>Confirme pelo WhatsApp antes de sair de casa</small>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn btn--verde" href="https://wa.me/5521992543326?text=Ol%C3%A1%2C%20Leguste!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg><use href="#i-whats"/></svg> Pedir no WhatsApp</a>
+          <a class="btn btn--vazio" href="https://www.instagram.com/legustenovaiguacu/" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg> Instagram</a>
+        </div>
+      </div>
+
+      <div class="mapa rev" style="--d:80ms">
+        <span class="mapa__grafo"></span>
+        <div class="mapa__pino">
+          <i><svg><use href="#i-pin"/></svg></i>
+          <b>Leguste Pizzaria</b>
+          <span>Rua Geni Saraiva, 1430 — Cerâmica<br>Nova Iguaçu / RJ</span>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Geni+Saraiva+1430+Cer%C3%A2mica+Nova+Igua%C3%A7u" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg> Abrir no Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PÓS-ENTREGA / AVALIAR ================= -->
+<section class="secao pos" id="avaliar">
+  <div class="container">
+    <div class="pos__cx rev">
+      <div class="pos__g">G</div>
+      <span class="rotulo">Depois que a pizza chega</span>
+      <h2 style="margin-top:12px">Avalie no <span class="ouro-txt">Google</span></h2>
+      <p>
+        Sua opinião ajuda a Leguste a crescer e ajuda quem procura uma boa pizza em Nova Iguaçu.
+        Toque nas estrelas e conte como foi a sua experiência.
+      </p>
+
+      <div class="pos__estrelas" id="posEstrelas" role="group" aria-label="Nota de 1 a 5 estrelas">
+        <button type="button" data-nota="1" aria-label="1 estrela"><svg><use href="#i-star"/></svg></button>
+        <button type="button" data-nota="2" aria-label="2 estrelas"><svg><use href="#i-star"/></svg></button>
+        <button type="button" data-nota="3" aria-label="3 estrelas"><svg><use href="#i-star"/></svg></button>
+        <button type="button" data-nota="4" aria-label="4 estrelas"><svg><use href="#i-star"/></svg></button>
+        <button type="button" data-nota="5" aria-label="5 estrelas"><svg><use href="#i-star"/></svg></button>
+      </div>
+      <div class="pos__dica" id="posDica">Toque para dar a sua nota</div>
+
+      <div class="pos__cta">
+        <button class="btn" id="btnGoogle" type="button"><svg><use href="#i-star"/></svg> Avaliar no Google</button>
+        <a class="btn btn--vazio" href="#cardapio"><svg><use href="#i-pizza"/></svg> Pedir de novo</a>
+      </div>
+
+      <div class="passos" aria-hidden="true">
+        <span class="passo on"><i>1</i> Escolher</span>
+        <span class="passo"><i>2</i> Pedido</span>
+        <span class="passo"><i>3</i> Entrega</span>
+        <span class="passo"><i>4</i> Avaliar</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= RODAPÉ ================= -->
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape__grade">
+      <div class="rodape__sobre">
+        <a class="marca" href="#inicio">
+          <img class="marca__logo" src="assets/img/logo-leguste.png" alt="Leguste Pizzaria" width="44" height="44">
+          <span class="marca__txt">
+            <span class="marca__nome">Leguste</span>
+            <span class="marca__sub">Pizzaria</span>
+          </span>
+        </a>
+        <p>Pizzaria e restaurante na Cerâmica, Nova Iguaçu. Rodízio de pizzas salgadas e doces, mais de 40 sabores tradicionais e aquele sabor de casa italiana.</p>
+      </div>
+
+      <div>
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#rodizio">Rodízio</a></li>
+          <li><a href="#experiencia">A Casa</a></li>
+          <li><a href="#local">Localização</a></li>
+          <li><a href="#avaliar">Avaliar no Google</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5521992543326" target="_blank" rel="noopener">(21) 99254-3326</a></li>
+          <li><a href="tel:+5521971176835">(21) 97117-6835</a></li>
+          <li><a href="https://www.instagram.com/legustenovaiguacu/" target="_blank" rel="noopener">@legustenovaiguacu</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Geni+Saraiva+1430+Cer%C3%A2mica+Nova+Igua%C3%A7u" target="_blank" rel="noopener">Rua Geni Saraiva, 1430</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      <span>© <span id="ano">2026</span> Leguste Pizzaria · Nova Iguaçu / RJ</span>
+      <span class="rodape__creditos">Apresentação digital desenvolvida por <b>Unitrix</b> · demonstração front-end</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BARRA MOBILE ================= -->
+<div class="barra-mob">
+  <a class="btn" href="#cardapio"><svg><use href="#i-pizza"/></svg> Cardápio</a>
+  <a class="btn btn--verde" href="https://wa.me/5521992543326" target="_blank" rel="noopener"><svg><use href="#i-whats"/></svg> WhatsApp</a>
+</div>
+
+<!-- ================= CARRINHO ================= -->
+<div class="carrinho__veu" id="veu"></div>
+<aside class="carrinho" id="carrinho" aria-label="Carrinho de pedidos" aria-hidden="true">
+  <div class="carrinho__topo">
+    <svg style="width:22px;height:22px;color:var(--ouro-400)"><use href="#i-cart"/></svg>
+    <h3>Seu pedido</h3>
+    <button class="fecha" id="fecharCarrinho" aria-label="Fechar carrinho"><svg><use href="#i-x"/></svg></button>
+  </div>
+
+  <div class="carrinho__corpo" id="carrinhoCorpo"></div>
+
+  <div class="carrinho__pé" id="carrinhoPé" hidden></div>
+</aside>
+
+<!-- toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg><use href="#i-check"/></svg>
+  <span id="toastTxt">Item adicionado</span>
+</div>
+
+<script src="assets/js/menu.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
