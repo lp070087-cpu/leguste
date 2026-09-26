@@ -1828,3 +1828,21 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .banner__tt em, .banner__tt strong { color:#e31b2d; }
 .banner__cta .btn--vazio { color:#fff8ee !important; border-color:rgba(255,248,238,.65) !important; background:rgba(0,0,0,.18) !important; }
 
+
+/* MOBILE HERO FORNO - COMPOSICAO FINAL */
+@media (max-width: 760px) and (orientation: portrait) {
+  .banner { position:relative !important; min-height:620px !important; overflow:hidden !important; }
+  .banner__fundo { position:absolute !important; inset:0 !important; }
+  .banner__fundo img { width:100% !important; height:100% !important; object-fit:cover !important; object-position:42% center !important; }
+  .banner__palco { position:absolute !important; display:block !important; left:0 !important; top:0 !important; width:55% !important; height:100% !important; z-index:3 !important; overflow:visible !important; }
+  .banner__pizza { display:block !important; visibility:visible !important; }
+  .banner__pizza--frente { position:absolute !important; width:72vw !important; max-width:none !important; left:-25vw !important; top:31% !important; bottom:auto !important; z-index:3 !important; }
+  .banner__pizza--tras { position:absolute !important; width:38vw !important; max-width:none !important; left:-8vw !important; top:18% !important; bottom:auto !important; z-index:2 !important; }
+  .banner__col { position:relative !important; z-index:5 !important; width:58% !important; max-width:none !important; margin-left:auto !important; margin-right:4vw !important; padding-left:0 !important; padding-right:0 !important; text-align:left !important; align-items:flex-start !important; }
+  .banner__tt { font-size:clamp(1.65rem,7.2vw,2.35rem) !important; line-height:.92 !important; }
+  .banner__txt { font-size:.86rem !important; line-height:1.45 !important; }
+  .banner__cta { width:100% !important; }
+  .banner__cta .btn { width:100% !important; justify-content:center !important; }
+  .banner__veu { background:linear-gradient(90deg,rgba(8,3,1,.05) 0%,rgba(8,3,1,.18) 38%,rgba(8,3,1,.68) 57%,rgba(8,3,1,.86) 100%) !important; }
+}
+
