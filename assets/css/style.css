@@ -1,6 +1,6 @@
 ﻿/* ==========================================================================
-   LEGUSTE PIZZARIA ï¿½ Apresentaï¿½ï¿½o (site estï¿½tico)
-   Sistema de design: verde/vermelho/ouro italiano sobre carvï¿½o
+   LEGUSTE PIZZARIA â€” ApresentaÃ§Ã£o (site estÃ¡tico)
+   Sistema de design: verde/vermelho/ouro italiano sobre carvÃ£o
    ========================================================================== */
 
 /* ---------- 1. TOKENS ---------- */
@@ -168,7 +168,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 
 .txt-dim { color: var(--txt-dim); }
 
-/* cabeï¿½alho de seï¿½ï¿½o */
+/* cabeÃ§alho de seÃ§Ã£o */
 .cabeca { max-width: 720px; margin-bottom: clamp(30px, 4.6vw, 58px); }
 .cabeca--centro { margin-inline: auto; text-align: center; }
 .cabeca h2 { margin-top: 12px; }
@@ -182,7 +182,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 }
 .cabeca--centro .filete { margin-inline: auto; }
 
-/* ---------- 5. BOTï¿½ES ---------- */
+/* ---------- 5. BOTÃ•ES ---------- */
 .btn {
   --bg: var(--ouro-500);
   --fg: #2a1c04;
@@ -348,18 +348,18 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 
 .burger { display: none; }
 
-/* ---------- 7. HERO ï¿½ banner ï¿½nico ----------
-   Era um carrossel de dois banners empilhados na mesma cï¿½lula do grid. Agora
-   ï¿½ UM banner sï¿½ (o claro, do rodï¿½zio), entï¿½o toda a mï¿½quina de alternï¿½ncia
-   saiu: a cï¿½lula de grid dupla, os vï¿½us escuros, a luz varrendo, as setas, os
-   pontos com barra de progresso, a variï¿½vel de duraï¿½ï¿½o do timer e o wrapper
-   `.hero__rolar` ï¿½ que, sem estilo prï¿½prio, virava uma SEGUNDA linha do grid
+/* ---------- 7. HERO â€” banner Ãºnico ----------
+   Era um carrossel de dois banners empilhados na mesma cÃ©lula do grid. Agora
+   Ã© UM banner sÃ³ (o claro, do rodÃ­zio), entÃ£o toda a mÃ¡quina de alternÃ¢ncia
+   saiu: a cÃ©lula de grid dupla, os vÃ©us escuros, a luz varrendo, as setas, os
+   pontos com barra de progresso, a variÃ¡vel de duraÃ§Ã£o do timer e o wrapper
+   `.hero__rolar` â€” que, sem estilo prÃ³prio, virava uma SEGUNDA linha do grid
    e era a faixa preta vazia embaixo do hero.
 
-   A entrada ï¿½ uma coreografia de CARREGAMENTO, nï¿½o de troca: `.hero--entra`
-   ï¿½ ligada pelo JS depois do primeiro quadro (ver app.js). O estado escondido
-   mora dentro de `.hero--entra`, entï¿½o sem a classe o hero aparece inteiro e
-   parado ï¿½ ï¿½ assim que `prefers-reduced-motion` funciona sem exceï¿½ï¿½o. */
+   A entrada Ã© uma coreografia de CARREGAMENTO, nÃ£o de troca: `.hero--entra`
+   Ã© ligada pelo JS depois do primeiro quadro (ver app.js). O estado escondido
+   mora dentro de `.hero--entra`, entÃ£o sem a classe o hero aparece inteiro e
+   parado â€” Ã© assim que `prefers-reduced-motion` funciona sem exceÃ§Ã£o. */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -375,8 +375,8 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   display: grid;
   align-items: center;
   padding-top: calc(var(--header-h) + 40px);
-  /* sem controles de carrossel no rodapï¿½ do hero: a reserva de 104px que
-     existia sï¿½ para eles sai, e o hero encosta na faixa seguinte */
+  /* sem controles de carrossel no rodapÃ© do hero: a reserva de 104px que
+     existia sÃ³ para eles sai, e o hero encosta na faixa seguinte */
   padding-bottom: 72px;
 }
 
@@ -384,7 +384,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .banner__fundo { position: absolute; inset: -4%; display: block; }
 .banner__fundo img { width: 100%; height: 100%; object-fit: cover; }
 
-/* o fundo corre devagar na horizontal (cï¿½mera), e para ï¿½ nï¿½o ï¿½ loop */
+/* o fundo corre devagar na horizontal (cÃ¢mera), e para â€” nÃ£o Ã© loop */
 .banner__fundo img { object-position: 40% 46%; transform: scale(1.06); }
 .hero--entra .banner__fundo img { animation: b2corre 8.6s ease-out both; }
 @keyframes b2corre {
@@ -410,11 +410,11 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .banner__pizza--tras { left: 16%; bottom: 42%; width: min(26%, 320px); }
 .banner__pizza--frente { left: 7%; bottom: 5%; width: min(56%, 700px); }
 
-/* As pizzas ENTRAM pela lateral esquerda, girando e crescendo, uma atrï¿½s da
-   outra: a grande em primeiro plano se acomoda e a de trï¿½s acompanha. Depois
+/* As pizzas ENTRAM pela lateral esquerda, girando e crescendo, uma atrÃ¡s da
+   outra: a grande em primeiro plano se acomoda e a de trÃ¡s acompanha. Depois
    de entrar, cada uma continua com um movimento ambiente MUITO sutil (2,6% de
-   deriva), que soma ao de entrada porque as duas animaï¿½ï¿½es valem no mesmo nï¿½
-   ï¿½ `both` mantï¿½m o estado final da entrada, e o ambiente comeï¿½a depois. */
+   deriva), que soma ao de entrada porque as duas animaÃ§Ãµes valem no mesmo nÃ³
+   â€” `both` mantÃ©m o estado final da entrada, e o ambiente comeÃ§a depois. */
 .hero--entra .banner__pizza--frente { opacity:0; animation:pizzaFrenteFinal 4.15s linear 0.72s both !important; }
 @keyframes b2entraF {
   0%   { opacity: 0; transform: translate3d(-30%, 9%, 0) scale(0.85) rotate(-7deg); }
@@ -437,7 +437,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   50%      { transform: translate3d(-0.8%, -0.9%, 0) scale(1.014) rotate(8.6deg); }
 }
 
-/* ---- coluna de conteï¿½do ---- */
+/* ---- coluna de conteÃºdo ---- */
 .banner__in {
   position: relative;
   z-index: 3;
@@ -490,7 +490,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   color: #4a3a29;
 }
 
-/* botï¿½o secundï¿½rio sobre o banner CLARO: o .btn--vazio padrï¿½o tem texto creme,
+/* botÃ£o secundÃ¡rio sobre o banner CLARO: o .btn--vazio padrÃ£o tem texto creme,
    que sumiria no fundo creme. Vira contorno escuro. */
 .banner__vazio--escuro { --fg: #241a11; border-color: rgba(36, 26, 17, 0.3); }
 .banner__vazio--escuro:hover { border-color: var(--vermelho-500); background: rgba(200, 16, 46, 0.07); }
@@ -502,9 +502,9 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   margin-top: 28px;
 }
 
-/* ---- entrada do conteï¿½do: selo ? tï¿½tulo ? texto ? aï¿½ï¿½es ----
-   O tï¿½tulo revela por Mï¿½SCARA (cortina), nï¿½o subindo; o resto entra da
-   direita. A ordem dos atrasos ï¿½ a ordem em que o olho deve ser puxado. */
+/* ---- entrada do conteÃºdo: selo â†’ tÃ­tulo â†’ texto â†’ aÃ§Ãµes ----
+   O tÃ­tulo revela por MÃSCARA (cortina), nÃ£o subindo; o resto entra da
+   direita. A ordem dos atrasos Ã© a ordem em que o olho deve ser puxado. */
 .hero--entra .banner__selo,
 .hero--entra .banner__tt,
 .hero--entra .banner__txt,
@@ -554,7 +554,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .faixa__item svg { width: 19px; height: 19px; color: var(--ouro-400); flex: none; }
 .faixa__pt { width: 7px; height: 7px; border-radius: 50%; background: var(--ouro-400); flex: none; }
 
-/* ---------- 9. CARDï¿½PIO (seï¿½ï¿½o clara ï¿½ as fotos sï¿½o de fundo branco) ---------- */
+/* ---------- 9. CARDÃPIO (seÃ§Ã£o clara â€” as fotos sÃ£o de fundo branco) ---------- */
 .filtros {
   display: flex;
   flex-wrap: wrap;
@@ -716,7 +716,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .add:active { transform: scale(0.94); }
 .add.feito { background: linear-gradient(130deg, var(--ouro-500), var(--ouro-600)); color: #2a1c04; transform: scale(1.08) rotate(90deg); }
 
-/* aviso cardï¿½pio demonstrativo */
+/* aviso cardÃ¡pio demonstrativo */
 .nota {
   margin-top: 30px;
   display: flex;
@@ -733,7 +733,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .nota svg { width: 18px; height: 18px; color: var(--vermelho-500); flex: none; margin-top: 2px; }
 .nota b { color: #241a11; }
 
-/* ---------- 10. RODï¿½ZIO ---------- */
+/* ---------- 10. RODÃZIO ---------- */
 .rodizio {
   position: relative;
   overflow: hidden;
@@ -830,7 +830,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   box-shadow: var(--sombra-ouro);
 }
 
-/* a foto vaza a moldura ï¿½ sem tocar no badge, que ï¿½ absoluto */
+/* a foto vaza a moldura â€” sem tocar no badge, que Ã© absoluto */
 .plano__foto {
   position: relative;
   aspect-ratio: 3 / 2;
@@ -843,7 +843,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .plano:hover .plano__foto img { transform: scale(1.06); }
 
 .plano__fit {
-  /* .plano ï¿½ position:relative, entï¿½o o selo se ancora no cartï¿½o */
+  /* .plano Ã© position:relative, entÃ£o o selo se ancora no cartÃ£o */
   position: absolute;
   top: 13px;
   left: 50%;
@@ -861,9 +861,9 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.75);
 }
 .plano__nome { font-family: var(--font-display); font-size: 1.28rem; color: var(--creme-100); }
-/* O preï¿½o ï¿½ UMA unidade visual: R$ + valor + centavos na mesma linha.
-   Como unidade flex, as trï¿½s partes ficam alinhadas pela base e nunca
-   quebram entre si; a legenda (por pessoa, etc.) ï¿½ que desce. */
+/* O preÃ§o Ã© UMA unidade visual: R$ + valor + centavos na mesma linha.
+   Como unidade flex, as trÃªs partes ficam alinhadas pela base e nunca
+   quebram entre si; a legenda (por pessoa, etc.) Ã© que desce. */
 .plano__preco {
   font-family: var(--font-display);
   font-size: 2.7rem;
@@ -883,7 +883,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   align-self: flex-end;
   margin-bottom: 0.16em;
 }
-/* a legenda ("por pessoa", "sazonal") vem DEPOIS do preï¿½o, em linha prï¿½pria */
+/* a legenda ("por pessoa", "sazonal") vem DEPOIS do preÃ§o, em linha prÃ³pria */
 .plano__legenda {
   display: block;
   font-family: var(--font-body);
@@ -898,7 +898,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .plano li { display: flex; gap: 10px; font-size: 0.85rem; color: var(--txt-dim); align-items: flex-start; }
 .plano li svg { width: 17px; height: 17px; color: var(--verde-400); flex: none; margin-top: 3px; }
 
-/* ---------- 11. EXPERIï¿½NCIA ---------- */
+/* ---------- 11. EXPERIÃŠNCIA ---------- */
 .exp__grade {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -931,7 +931,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .exp__cx--alto { grid-row: span 2; }
 .exp__cx--largo { grid-column: span 2; }
 
-/* avaliaï¿½ï¿½o Google */
+/* avaliaÃ§Ã£o Google */
 .aval {
   margin-top: clamp(30px, 4.4vw, 52px);
   display: grid;
@@ -943,8 +943,8 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   background: linear-gradient(150deg, var(--carvao-800), var(--carvao-900));
   border: 1px solid var(--linha);
 }
-/* reputaï¿½ï¿½o: no desktop o selo e o parï¿½grafo ficam lado a lado (como estava);
-   no celular eles empilham ï¿½ ver @media 620px, onde a coluna estreita
+/* reputaÃ§Ã£o: no desktop o selo e o parÃ¡grafo ficam lado a lado (como estava);
+   no celular eles empilham â€” ver @media 620px, onde a coluna estreita
    fazia o texto passar por cima do selo */
 .aval__nota { display: flex; align-items: center; gap: 15px; }
 .aval__big {
@@ -971,7 +971,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .aval__google svg { flex: none; }
 .aval__google b { font-size: 0.98rem; color: var(--creme-100); }
 
-/* ---------- 12. LOCALIZAï¿½ï¿½O ---------- */
+/* ---------- 12. LOCALIZAÃ‡ÃƒO ---------- */
 .local {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
@@ -1050,11 +1050,11 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .mapa__pino span { display: block; font-size: 0.86rem; color: var(--txt-dim); margin-top: 5px; }
 .mapa__pino .btn { margin-top: 20px; }
 
-/* --- LOCAL, na seï¿½ï¿½o clara ---------------------------------------------
-   Os cards de contato foram desenhados para o fundo carvï¿½o: texto creme e
-   borda dourada translï¿½cida. Sobre o fundo creme eles ficavam lavados, com
-   o tï¿½tulo quase invisï¿½vel. Aqui a cor ï¿½ trocada por valor sï¿½lido ï¿½ nada de
-   opacity no container, que apagaria texto e ï¿½cone junto. --------------- */
+/* --- LOCAL, na seÃ§Ã£o clara ---------------------------------------------
+   Os cards de contato foram desenhados para o fundo carvÃ£o: texto creme e
+   borda dourada translÃºcida. Sobre o fundo creme eles ficavam lavados, com
+   o tÃ­tulo quase invisÃ­vel. Aqui a cor Ã© trocada por valor sÃ³lido â€” nada de
+   opacity no container, que apagaria texto e Ã­cone junto. --------------- */
 .secao--creme .local__item {
   background: #fff;
   border-color: rgba(36, 26, 17, 0.12);
@@ -1071,10 +1071,10 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   background: linear-gradient(140deg, rgba(18, 148, 74, 0.14), rgba(200, 16, 46, 0.12));
   border-color: rgba(36, 26, 17, 0.12);
 }
-/* o ï¿½cone dourado sumia no creme: aqui ele usa o vermelho da casa */
+/* o Ã­cone dourado sumia no creme: aqui ele usa o vermelho da casa */
 .secao--creme .local__ico svg { color: var(--vermelho-500); }
 
-/* marcador do mapa: mesma correï¿½ï¿½o, com fundo claro e contraste real */
+/* marcador do mapa: mesma correÃ§Ã£o, com fundo claro e contraste real */
 .secao--creme .mapa {
   border-color: rgba(36, 26, 17, 0.12);
   background:
@@ -1200,10 +1200,10 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   background: var(--carvao-800);
   border: 1px solid rgba(255, 210, 74, 0.16);
   color: var(--creme-100);
-  /* 1rem = 16px ï¿½ o PISO do Safari do iPhone: em campo com fonte menor o
-     navegador dï¿½ zoom ao focar e o usuï¿½rio fica com a tela ampliada no meio
-     do pedido. Nï¿½o ï¿½ um ajuste estï¿½tico ï¿½ ï¿½ o valor mï¿½nimo que evita o zoom
-     automï¿½tico sem precisar bloquear o zoom do usuï¿½rio. */
+  /* 1rem = 16px Ã© o PISO do Safari do iPhone: em campo com fonte menor o
+     navegador dÃ¡ zoom ao focar e o usuÃ¡rio fica com a tela ampliada no meio
+     do pedido. NÃ£o Ã© um ajuste estÃ©tico â€” Ã© o valor mÃ­nimo que evita o zoom
+     automÃ¡tico sem precisar bloquear o zoom do usuÃ¡rio. */
   font-size: 16px;
   transition: border-color 0.28s, background 0.28s;
   width: 100%;
@@ -1235,7 +1235,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .opcao.on { border-color: var(--ouro-400); background: rgba(255, 210, 74, 0.07); }
 .opcao__p { margin-left: auto; font-weight: 800; color: var(--ouro-400); font-size: 0.85rem; white-space: nowrap; }
 
-.carrinho__pï¿½ {
+.carrinho__pÃ© {
   flex: none;
   padding: 18px 20px calc(18px + env(safe-area-inset-bottom));
   border-top: 1px solid var(--linha);
@@ -1256,7 +1256,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 }
 .resumo .total b { font-family: var(--font-display); font-size: 1.7rem; color: var(--ouro-400); font-weight: 400; }
 
-/* confirmaï¿½ï¿½o do pedido */
+/* confirmaÃ§Ã£o do pedido */
 .recibo { text-align: center; padding: 34px 6px; }
 .recibo__tick {
   width: 78px; height: 78px;
@@ -1297,7 +1297,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .passo.on { color: var(--creme-100); }
 .passo.on i { background: var(--verde-500); border-color: transparent; color: #fff; }
 
-/* ---------- 14. AVALIAR (pï¿½s-entrega) ---------- */
+/* ---------- 14. AVALIAR (pÃ³s-entrega) ---------- */
 .pos {
   position: relative;
   overflow: hidden;
@@ -1391,7 +1391,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 .barra-mob .btn { flex: 1; min-height: 48px; }
 
 /* aviso para leitores de tela: anuncia sem desenhar nada na tela.
-   Substitui o antigo balï¿½o "Item adicionado", que cobria a barra do celular. */
+   Substitui o antigo balÃ£o "Item adicionado", que cobria a barra do celular. */
 .so-leitor {
   position: absolute;
   width: 1px; height: 1px;
@@ -1451,26 +1451,26 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   }
   .burger svg { width: 21px; height: 21px; }
   .barra-mob { display: flex; }
-  /* o header fixo invade a status bar do iPhone quando a pï¿½gina usa
-     viewport-fit=cover: a altura mï¿½nima cresce com o entalhe e o conteï¿½do do
-     header desce junto ï¿½ senï¿½o a marca fica atrï¿½s do relï¿½gio */
+  /* o header fixo invade a status bar do iPhone quando a pÃ¡gina usa
+     viewport-fit=cover: a altura mÃ­nima cresce com o entalhe e o conteÃºdo do
+     header desce junto â€” senÃ£o a marca fica atrÃ¡s do relÃ³gio */
   .topo {
     height: calc(var(--header-h) + env(safe-area-inset-top, 0px));
     padding-top: env(safe-area-inset-top, 0px);
   }
-  /* a barra cresce com a safe-area do iPhone: a reserva de espaï¿½o acompanha,
-     senï¿½o ela cobriria o fim do conteï¿½do em aparelhos com barra inferior */
+  /* a barra cresce com a safe-area do iPhone: a reserva de espaÃ§o acompanha,
+     senÃ£o ela cobriria o fim do conteÃºdo em aparelhos com barra inferior */
   body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
   .rodape__base { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 760px) {
-  /* ---- CARDï¿½PIO no celular: EXATAMENTE 2 PRODUTOS POR FILEIRA (ï¿½8) ----
+  /* ---- CARDÃPIO no celular: EXATAMENTE 2 PRODUTOS POR FILEIRA (Â§8) ----
      Antes havia um `grid-template-columns: 1fr` no bloco de 620px que jogava
-     tudo numa coluna sï¿½. Aqui a grade ï¿½ fixa em 2 colunas e o cartï¿½o encolhe
-     para caber: minmax(0, 1fr) ï¿½ obrigatï¿½rio, senï¿½o o conteï¿½do largo do cartï¿½o
+     tudo numa coluna sÃ³. Aqui a grade Ã© fixa em 2 colunas e o cartÃ£o encolhe
+     para caber: minmax(0, 1fr) Ã© obrigatÃ³rio, senÃ£o o conteÃºdo largo do cartÃ£o
      impede a coluna de encolher e a grade estoura na horizontal.
-     Ordem de prioridade do cartï¿½o: FOTO, NOME, PREï¿½O, Aï¿½ï¿½O. */
+     Ordem de prioridade do cartÃ£o: FOTO, NOME, PREÃ‡O, AÃ‡ÃƒO. */
   .grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 
   .prato { border-radius: var(--raio); }
@@ -1478,7 +1478,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .prato__faixa { top: 8px; left: 8px; padding: 4px 8px; font-size: 0.5rem; letter-spacing: 0.1em; }
   .prato__corpo { padding: 12px 12px 13px; gap: 7px; min-width: 0; }
   .prato__nome { font-size: 0.95rem; line-height: 1.12; overflow-wrap: break-word; }
-  /* a descriï¿½ï¿½o ï¿½ o que menos importa no celular: fica em 2 linhas */
+  /* a descriÃ§Ã£o Ã© o que menos importa no celular: fica em 2 linhas */
   .prato__desc {
     font-size: 0.76rem;
     line-height: 1.45;
@@ -1487,11 +1487,11 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  /* o preï¿½o e o botï¿½o dividem uma coluna de ~138px em 320px: se nï¿½o couberem
-     lado a lado, o botï¿½o desce ï¿½ a linha cede, a largura nï¿½o estoura (ï¿½8/ï¿½16) */
+  /* o preÃ§o e o botÃ£o dividem uma coluna de ~138px em 320px: se nÃ£o couberem
+     lado a lado, o botÃ£o desce â€” a linha cede, a largura nÃ£o estoura (Â§8/Â§16) */
   .prato__pe { gap: 8px; row-gap: 6px; flex-wrap: wrap; margin-top: 2px; padding-top: 10px; }
   .prato__preco { font-size: 1.06rem; min-width: 0; }
-  /* o rï¿½tulo "a partir de" some no celular para o preï¿½o caber sem quebrar */
+  /* o rÃ³tulo "a partir de" some no celular para o preÃ§o caber sem quebrar */
   .prato__preco small { display: none; }
   .add { width: 38px; height: 38px; }
   .add svg { width: 16px; height: 16px; }
@@ -1500,16 +1500,16 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .exp__cx--alto, .exp__cx--largo { grid-row: auto; grid-column: auto; }
   .rodape__grade { grid-template-columns: 1fr; }
 
-  /* ---- MOBILE do hero (ï¿½7): composiï¿½ï¿½o PRï¿½PRIA, nï¿½o um desktop encolhido.
-     Ordem de leitura: header ? pizza ? selo ? tï¿½tulo ? texto ? aï¿½ï¿½es.
-     O produto sai de trï¿½s do texto e vira uma FAIXA no alto; o texto vem
-     abaixo, sobre o vï¿½u claro, sem nunca ficar por baixo da pizza.
+  /* ---- MOBILE do hero (Â§7): composiÃ§Ã£o PRÃ“PRIA, nÃ£o um desktop encolhido.
+     Ordem de leitura: header â†’ pizza â†’ selo â†’ tÃ­tulo â†’ texto â†’ aÃ§Ãµes.
+     O produto sai de trÃ¡s do texto e vira uma FAIXA no alto; o texto vem
+     abaixo, sobre o vÃ©u claro, sem nunca ficar por baixo da pizza.
 
-     A altura Nï¿½O ï¿½ fixa nem herdada de `100svh`: ï¿½ a soma do que existe
+     A altura NÃƒO Ã© fixa nem herdada de `100svh`: Ã© a soma do que existe
      (header + entalhe + faixa do produto + texto + respiro). Assim funciona
      em 320x568 e em 430x932, com a barra do Safari entrando e saindo.
-     `100dvh` como PISO (nï¿½o como `height`) garante que o hero preencha a tela
-     visï¿½vel quando ela ï¿½ alta, e cede quando o conteï¿½do ï¿½ maior. ---- */
+     `100dvh` como PISO (nÃ£o como `height`) garante que o hero preencha a tela
+     visÃ­vel quando ela Ã© alta, e cede quando o conteÃºdo Ã© maior. ---- */
   .hero {
     min-height: 0;
     background: var(--creme-100);
@@ -1518,17 +1518,17 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    /* o header tem a altura do entalhe; o hero comeï¿½a depois dele */
+    /* o header tem a altura do entalhe; o hero comeÃ§a depois dele */
     padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px) + 10px);
-    /* sem controles de carrossel: o respiro que sobra ï¿½ sï¿½ o da seï¿½ï¿½o */
+    /* sem controles de carrossel: o respiro que sobra Ã© sÃ³ o da seÃ§Ã£o */
     padding-bottom: 46px;
   }
-  /* a faixa do produto ï¿½ caber uma pizza grande SEM empurrar o texto:
-     a faixa ï¿½ proporcional ï¿½ LARGURA e limitada pela ALTURA disponï¿½vel.
-     O `svh` ï¿½ de propï¿½sito (nï¿½o `dvh`): svh ï¿½ a altura com as barras do
-     Safari visï¿½veis e Nï¿½O muda quando a barra some ao rolar. Com `dvh` a
-     faixa mudaria de tamanho durante o scroll ï¿½ exatamente o pulo que nï¿½o
-     pode acontecer. A primeira linha ï¿½ o fallback para navegador antigo. */
+  /* a faixa do produto â€” caber uma pizza grande SEM empurrar o texto:
+     a faixa Ã© proporcional Ã  LARGURA e limitada pela ALTURA disponÃ­vel.
+     O `svh` Ã© de propÃ³sito (nÃ£o `dvh`): svh Ã© a altura com as barras do
+     Safari visÃ­veis e NÃƒO muda quando a barra some ao rolar. Com `dvh` a
+     faixa mudaria de tamanho durante o scroll â€” exatamente o pulo que nÃ£o
+     pode acontecer. A primeira linha Ã© o fallback para navegador antigo. */
   .hero { --palco-h: clamp(180px, 52vw, 320px); }
   .banner__palco {
     position: relative;
@@ -1538,9 +1538,9 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
     height: min(var(--palco-h), 46svh);
     flex: none;
   }
-  /* A pizza grande fica CENTRADA na faixa e transborda sï¿½ um pouco ï¿½ esquerda
-     ï¿½ corte nas laterais, nunca na parte de cima (a borda recheada ï¿½ o que
-     vende). A de trï¿½s aparece atrï¿½s, ï¿½ direita, tambï¿½m inteira no alto. */
+  /* A pizza grande fica CENTRADA na faixa e transborda sÃ³ um pouco Ã  esquerda
+     â€” corte nas laterais, nunca na parte de cima (a borda recheada Ã© o que
+     vende). A de trÃ¡s aparece atrÃ¡s, Ã  direita, tambÃ©m inteira no alto. */
   .banner__pizza--frente {
     left: 50%;
     top: 2px;
@@ -1555,8 +1555,8 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
     bottom: auto;
     width: min(36%, 165px);
   }
-  /* a entrada no celular ï¿½ mais curta e horizontal, sem rotaï¿½ï¿½o grande:
-     menos pixels animados, mesmo efeito. O zoom de fundo Nï¿½O roda aqui. */
+  /* a entrada no celular Ã© mais curta e horizontal, sem rotaÃ§Ã£o grande:
+     menos pixels animados, mesmo efeito. O zoom de fundo NÃƒO roda aqui. */
   .hero--entra .banner__pizza--frente { opacity:0; animation:pizzaFrenteFinal 4.15s linear 0.72s both !important; }
   .hero--entra .banner__pizza--tras { opacity:0; animation:pizzaTrasFinal 4.15s linear 0.72s both !important; }
   @keyframes mEntraF {
@@ -1572,9 +1572,9 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 
   .banner__in { padding-top: 18px; }
   .banner__col { max-width: none; }
-  /* 6,6vw: em 320px dï¿½ 21px (cabe "A MESA CHEIA," sem apertar) e em 430px dï¿½
-     28px, quando o teto de 2,6rem assume. O mï¿½nimo de 1,72rem ï¿½ o piso para
-     a linha nï¿½o quebrar em trï¿½s. `overflow-wrap` ï¿½ a ï¿½ltima defesa: se algum
+  /* 6,6vw: em 320px dÃ¡ 21px (cabe "A MESA CHEIA," sem apertar) e em 430px dÃ¡
+     28px, quando o teto de 2,6rem assume. O mÃ­nimo de 1,72rem Ã© o piso para
+     a linha nÃ£o quebrar em trÃªs. `overflow-wrap` Ã© a Ãºltima defesa: se algum
      aparelho estreitar mais que o previsto, a palavra quebra em vez de estourar. */
   .banner__tt {
     font-size: clamp(1.72rem, 6.6vw, 2.6rem);
@@ -1585,9 +1585,9 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 
   .banner__selo { font-size: 0.58rem; padding: 7px 12px; letter-spacing: 0.16em; }
 
-  /* No celular o fundo ï¿½ quase todo coberto pela faixa do produto: o vï¿½u
-     empurra o creme para cima, entï¿½o embaixo o texto fica sobre creme CHEIO ï¿½
-     contraste mï¿½ximo, sem depender da foto. */
+  /* No celular o fundo Ã© quase todo coberto pela faixa do produto: o vÃ©u
+     empurra o creme para cima, entÃ£o embaixo o texto fica sobre creme CHEIO â€”
+     contraste mÃ¡ximo, sem depender da foto. */
   .banner__veu {
     background:
       linear-gradient(180deg, rgba(255, 248, 238, 0.1) 0%, rgba(255, 248, 238, 0.82) 38%, #fff8ee 50%, #fff8ee 100%);
@@ -1595,20 +1595,20 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .banner__tt, .banner__txt { text-shadow: none; }
 }
 
-/* ---- CELULAR DEITADO: a composiï¿½ï¿½o do DESKTOP volta, em duas colunas ----
-   Em landscape a altura ï¿½til cai para ~350px. Medido, o hero em uma coluna
-   sï¿½ ficava com ~500px de altura em 667x375: o botï¿½o caï¿½a 130px abaixo da
-   dobra e o visitante tinha de rolar para achar a aï¿½ï¿½o. Empilhar mais apertado
-   nï¿½o resolve ï¿½ nenhuma reduï¿½ï¿½o de fonte devolve 130px.
+/* ---- CELULAR DEITADO: a composiÃ§Ã£o do DESKTOP volta, em duas colunas ----
+   Em landscape a altura Ãºtil cai para ~350px. Medido, o hero em uma coluna
+   sÃ³ ficava com ~500px de altura em 667x375: o botÃ£o caÃ­a 130px abaixo da
+   dobra e o visitante tinha de rolar para achar a aÃ§Ã£o. Empilhar mais apertado
+   nÃ£o resolve â€” nenhuma reduÃ§Ã£o de fonte devolve 130px.
 
-   Entï¿½o aqui o produto e o texto voltam a ficar LADO A LADO, que ï¿½ a
-   composiï¿½ï¿½o que o site jï¿½ usa no desktop (produto ï¿½ esquerda, texto ï¿½
-   direita) ï¿½ nï¿½o ï¿½ um design novo, ï¿½ a mesma ideia aplicada ao caso em que a
-   tela ï¿½ larga e baixa. A altura passa a ser a do MAIOR dos dois lados, e
+   EntÃ£o aqui o produto e o texto voltam a ficar LADO A LADO, que Ã© a
+   composiÃ§Ã£o que o site jÃ¡ usa no desktop (produto Ã  esquerda, texto Ã 
+   direita) â€” nÃ£o Ã© um design novo, Ã© a mesma ideia aplicada ao caso em que a
+   tela Ã© larga e baixa. A altura passa a ser a do MAIOR dos dois lados, e
    tudo cabe sem rolagem.
 
-   O critï¿½rio ï¿½ a ALTURA da janela, nï¿½o a largura: `max-height: 540px` pega
-   qualquer celular deitado (o mais alto tem 430px) e nï¿½o pega tablet em
+   O critÃ©rio Ã© a ALTURA da janela, nÃ£o a largura: `max-height: 540px` pega
+   qualquer celular deitado (o mais alto tem 430px) e nÃ£o pega tablet em
    retrato nem desktop. */
 @media (orientation: landscape) and (max-height: 540px) {
   .banner {
@@ -1618,9 +1618,9 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
     padding-bottom: 30px;
   }
   /* a faixa do produto vira a COLUNA da esquerda. Sem `grid-column: 1` ela
-     cairia na primeira coluna e empurraria o texto para a segunda... que ï¿½
-     onde ele jï¿½ vai ï¿½ mas o texto ï¿½ o 2ï¿½ filho em ordem de documento, entï¿½o
-     declarar as colunas explicitamente ï¿½ o que evita ambiguidade. */
+     cairia na primeira coluna e empurraria o texto para a segunda... que Ã©
+     onde ele jÃ¡ vai â€” mas o texto Ã© o 2Âº filho em ordem de documento, entÃ£o
+     declarar as colunas explicitamente Ã© o que evita ambiguidade. */
   .banner__palco {
     position: relative;
     inset: auto;
@@ -1630,24 +1630,24 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
     flex: none;
   }
   /* a `--palco-h` do retrato (52vw) daria 347px de altura aqui: em paisagem
-     quem manda ï¿½ a ALTURA da tela. O teto de 42svh ï¿½ o mesmo que a pizza usa
-     logo abaixo, entï¿½o a imagem nunca passa da faixa. */
+     quem manda Ã© a ALTURA da tela. O teto de 42svh Ã© o mesmo que a pizza usa
+     logo abaixo, entÃ£o a imagem nunca passa da faixa. */
   .hero { --palco-h: clamp(120px, 48svh, 210px); }
 
-  /* a pizza se dimensiona pela ALTURA disponï¿½vel, nï¿½o pela largura da coluna:
-     as duas sï¿½o quadradas (760x760), entï¿½o largura = altura desenhada */
+  /* a pizza se dimensiona pela ALTURA disponÃ­vel, nÃ£o pela largura da coluna:
+     as duas sÃ£o quadradas (760x760), entÃ£o largura = altura desenhada */
   .banner__pizza--frente { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); width: min(72%, 42svh); }
   .banner__pizza--tras { left: auto; right: 0; top: 0; bottom: auto; width: min(40%, 26svh); }
 
   .banner__in { grid-column: 2; padding-top: 0; padding-inline: 18px; }
-  /* `.banner__in` ï¿½ uma grade de DUAS colunas no desktop e o texto mora na
+  /* `.banner__in` Ã© uma grade de DUAS colunas no desktop e o texto mora na
      segunda. Sem desfazer isso, o texto ficaria espremido em 1/4 da largura. */
   .banner__in, .banner__in--dir { grid-template-columns: minmax(0, 1fr); }
   .banner__in--dir .banner__col { grid-column: 1; justify-self: stretch; }
   .banner__col { max-width: none; }
 
-  /* a coluna do texto fica sobre a foto: o mesmo vï¿½u creme do retrato, agora
-     na horizontal, garante o contraste do tï¿½tulo escuro sem apagar o produto */
+  /* a coluna do texto fica sobre a foto: o mesmo vÃ©u creme do retrato, agora
+     na horizontal, garante o contraste do tÃ­tulo escuro sem apagar o produto */
   .banner__veu {
     background:
       linear-gradient(90deg, rgba(255, 248, 238, 0.06) 0%, rgba(255, 248, 238, 0.7) 42%, #fff8ee 56%, #fff8ee 100%);
@@ -1658,7 +1658,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .banner__cta { margin-top: 16px; }
   .banner__cta .btn { flex: 0 1 auto; min-width: 0; }
 
-  /* a entrada ï¿½ mais curta ainda: em paisagem o movimento tem de acabar antes
+  /* a entrada Ã© mais curta ainda: em paisagem o movimento tem de acabar antes
      de o visitante decidir girar o aparelho de volta */
   .hero--entra .banner__pizza--frente { opacity:0; animation:pizzaFrenteFinal 4.15s linear 0.72s both !important; }
   .hero--entra .banner__pizza--tras { opacity:0; animation:pizzaTrasFinal 4.15s linear 0.72s both !important; }
@@ -1666,13 +1666,13 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 
 @media (max-width: 620px) {
   /* Os dois CTAs do hero dividem a fileira enquanto houver largura para isso:
-     com o rï¿½tulo de 17 caracteres em caixa alta, cada botï¿½o precisa de ~200px
-     para caber numa linha sï¿½. Acima de 430px a fileira dï¿½ isso; abaixo, a
-     linha cede e cada botï¿½o vira largura cheia (regra no bloco de 430px) ï¿½
-     dois botï¿½es apertados seriam pior que dois botï¿½es empilhados. */
+     com o rÃ³tulo de 17 caracteres em caixa alta, cada botÃ£o precisa de ~200px
+     para caber numa linha sÃ³. Acima de 430px a fileira dÃ¡ isso; abaixo, a
+     linha cede e cada botÃ£o vira largura cheia (regra no bloco de 430px) â€”
+     dois botÃµes apertados seriam pior que dois botÃµes empilhados. */
   .banner__cta { gap: 10px; }
   .banner__cta .btn { min-height: 52px; padding-inline: 16px; }
-  /* a grade do cardï¿½pio Nï¿½O volta para 1 coluna: no celular sï¿½o 2 produtos
+  /* a grade do cardÃ¡pio NÃƒO volta para 1 coluna: no celular sÃ£o 2 produtos
      por fileira (regra definida no bloco de 760px) */
   .planos { grid-template-columns: 1fr; }
   .filtros { gap: 8px; }
@@ -1681,7 +1681,7 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .pos__estrelas button { width: 40px; height: 40px; }
   .pos__estrelas button svg { width: 30px; height: 30px; }
   .pos__cta .btn { flex: 1 1 100%; }
-  /* REPUTAï¿½ï¿½O no celular: selo e parï¿½grafo empilham, com respiro entre eles.
+  /* REPUTAÃ‡ÃƒO no celular: selo e parÃ¡grafo empilham, com respiro entre eles.
      Antes ficavam lado a lado e o texto invadia o selo do Google. */
   .aval__nota { flex-direction: column; align-items: flex-start; gap: 10px; }
   .aval__meta { margin-top: 0; max-width: 100%; }
@@ -1692,8 +1692,8 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .marca__sub { font-size: 0.5rem; letter-spacing: 0.34em; }
   .marca__logo { width: 39px; height: 39px; }
   .carrinho-btn, .burger { width: 43px; height: 43px; }
-  /* os dois CTAs do hero: empilhados, cada um com a largura toda. ï¿½ alvo de
-     toque grande em 320px e o rï¿½tulo nunca quebra no meio. */
+  /* os dois CTAs do hero: empilhados, cada um com a largura toda. Ã‰ alvo de
+     toque grande em 320px e o rÃ³tulo nunca quebra no meio. */
   .banner__cta { gap: 9px; }
   .banner__cta .btn { flex: 1 1 100%; justify-content: center; }
   .inclusos { grid-template-columns: 1fr; }
@@ -1706,15 +1706,15 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .cabeca p { font-size: 0.96rem; }
   .rodizio__selo { width: 76px; height: 76px; font-size: 0.62rem; }
   .mapa { padding: 20px 16px; min-height: 260px; }
-  /* o cartï¿½o do cardï¿½pio mantï¿½m a medida compacta de 2 por fileira ï¿½
-     aqui Nï¿½O se aumenta padding nem nome, senï¿½o a fileira estoura (ï¿½8) */
+  /* o cartÃ£o do cardÃ¡pio mantÃ©m a medida compacta de 2 por fileira â€”
+     aqui NÃƒO se aumenta padding nem nome, senÃ£o a fileira estoura (Â§8) */
   .add { width: 36px; height: 36px; }
-  .carrinho__topo, .carrinho__corpo, .carrinho__pï¿½ { padding-inline: 16px; }
+  .carrinho__topo, .carrinho__corpo, .carrinho__pÃ© { padding-inline: 16px; }
   .recibo__cx { padding: 14px; }
 }
 
 @media (max-width: 400px) {
-  /* o item do carrinho ganha uma 2ï¿½ linha antes de o texto estourar */
+  /* o item do carrinho ganha uma 2Âª linha antes de o texto estourar */
   .item { grid-template-columns: 56px minmax(0, 1fr); }
   .item__foto { width: 56px; height: 56px; }
   .item__dir {
@@ -1729,14 +1729,14 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 @media (max-width: 375px) {
   :root { --pad: 16px; }
   h1 { font-size: 2.35rem; }
-  /* a faixa do produto vem do token, e nï¿½o do `height` direto: assim o bloco
-     de paisagem (que sï¿½ mexe no token) continua valendo aqui em 375px */
+  /* a faixa do produto vem do token, e nÃ£o do `height` direto: assim o bloco
+     de paisagem (que sÃ³ mexe no token) continua valendo aqui em 375px */
   .hero { --palco-h: clamp(158px, 44vw, 232px); }
   .marca__logo { width: 36px; height: 36px; }
   .btn { padding: 12px 20px; font-size: 0.76rem; }
   .filtro { padding: 9px 13px; font-size: 0.66rem; }
-  /* sem foto 3:2 aqui: com 2 cartï¿½es por fileira a foto 4:3 ï¿½ a que mantï¿½m
-     o cartï¿½o compacto e a fileira alinhada (ï¿½8) */
+  /* sem foto 3:2 aqui: com 2 cartÃµes por fileira a foto 4:3 Ã© a que mantÃ©m
+     o cartÃ£o compacto e a fileira alinhada (Â§8) */
   .prato__corpo { padding: 11px 11px 12px; }
   .prato__nome { font-size: 0.9rem; }
   .pos__estrelas { gap: 4px; }
@@ -1758,12 +1758,12 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
     scroll-behavior: auto !important;
   }
   .rev { opacity: 1; transform: none; }
-  /* A entrada do hero ï¿½ a ï¿½nica animaï¿½ï¿½o do site com ATRASO. O bloco acima
-     zera a duraï¿½ï¿½o, mas nï¿½o o atraso: sem isto, quem liga "reduzir movimento"
-     com a pï¿½gina aberta veria o tï¿½tulo escondido por 0,72 s e as aï¿½ï¿½es por
-     1,28 s. Com o atraso zerado, a composiï¿½ï¿½o se acomoda na hora ï¿½ estï¿½tica,
+  /* A entrada do hero Ã© a Ãºnica animaÃ§Ã£o do site com ATRASO. O bloco acima
+     zera a duraÃ§Ã£o, mas nÃ£o o atraso: sem isto, quem liga "reduzir movimento"
+     com a pÃ¡gina aberta veria o tÃ­tulo escondido por 0,72 s e as aÃ§Ãµes por
+     1,28 s. Com o atraso zerado, a composiÃ§Ã£o se acomoda na hora â€” estÃ¡tica,
      inteira e bonita, como o esperado. (No carregamento normal a classe nem
-     ï¿½ ligada pelo JS, entï¿½o isto ï¿½ a segunda linha de defesa.) */
+     Ã© ligada pelo JS, entÃ£o isto Ã© a segunda linha de defesa.) */
   .hero--entra .banner__selo,
   .hero--entra .banner__tt,
   .hero--entra .banner__txt,
@@ -1858,14 +1858,25 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
 }
 
 
-/* HERO MOBILE - PIZZAS FINAL + ANIMACAO */
-@keyframes pizzaMobileGrande{0%{opacity:0;transform:translate3d(-300px,0,0) scale(.10) rotate(-180deg)}20%{opacity:.38;transform:translate3d(-245px,0,0) scale(.25) rotate(-145deg)}45%{opacity:.70;transform:translate3d(-165px,0,0) scale(.50) rotate(-100deg)}70%{opacity:.90;transform:translate3d(-85px,0,0) scale(.75) rotate(-55deg)}88%{opacity:.90;transform:translate3d(-30px,0,0) scale(.92) rotate(-20deg)}100%{opacity:1;transform:translate3d(0,0,0) scale(1) rotate(0deg)}}25%{opacity:.35}70%{opacity:.9;transform:translate3d(-25px,5px,0) scale(.88) rotate(-18deg)}100%{opacity:1;transform:translate3d(0,0,0) scale(1) rotate(0)}}
-@keyframes pizzaMobilePequena{0%{opacity:0;transform:translate3d(-220px,0,0) scale(.10) rotate(-180deg)}20%{opacity:.35;transform:translate3d(-180px,0,0) scale(.25) rotate(-145deg)}45%{opacity:.68;transform:translate3d(-120px,0,0) scale(.50) rotate(-100deg)}70%{opacity:.88;transform:translate3d(-60px,0,0) scale(.75) rotate(-55deg)}88%{opacity:.82;transform:translate3d(-20px,0,0) scale(.92) rotate(-20deg)}100%{opacity:.92;transform:translate3d(0,0,0) scale(1) rotate(0deg)}}25%{opacity:.3}70%{opacity:.85;transform:translate3d(-18px,3px,0) scale(.90) rotate(-15deg)}100%{opacity:.95;transform:translate3d(0,0,0) scale(1) rotate(0)}}
-@media screen and (max-width:760px){
-.hero .banner .banner__palco{display:block!important;visibility:visible!important;opacity:1!important;position:absolute!important;inset:auto 0 0 0!important;width:100%!important;height:250px!important;z-index:50!important;overflow:visible!important;transform:none!important;pointer-events:none!important}
-.hero .banner .banner__pizza--frente{position:absolute!important;display:block!important;visibility:visible!important;width:280px!important;height:auto!important;max-width:none!important;left:50%!important;right:auto!important;top:auto!important;bottom:-20px!important;z-index:52!important;opacity:0;animation:pizzaMobileGrande 4.15s linear .72s both!important;filter:drop-shadow(0 18px 24px rgba(0,0,0,.30))!important}
-.hero .banner .banner__pizza--tras{position:absolute!important;display:block!important;visibility:visible!important;width:138px!important;height:auto!important;max-width:none!important;left:8px!important;right:auto!important;top:10px!important;bottom:auto!important;z-index:51!important;opacity:0;animation:pizzaMobilePequena 4.15s linear .72s both!important;filter:drop-shadow(0 14px 20px rgba(0,0,0,.26))!important}
+/* HERO MOBILE PIZZAS - BLOCO FINAL LIMPO */
+@keyframes legustePizzaGrandeMobile {
+0% { opacity:0; transform:translate3d(-300px,0,0) scale(.10) rotate(-180deg); }
+20% { opacity:.38; transform:translate3d(-245px,0,0) scale(.25) rotate(-145deg); }
+45% { opacity:.70; transform:translate3d(-165px,0,0) scale(.50) rotate(-100deg); }
+70% { opacity:.90; transform:translate3d(-85px,0,0) scale(.75) rotate(-55deg); }
+88% { opacity:.90; transform:translate3d(-30px,0,0) scale(.92) rotate(-20deg); }
+100% { opacity:1; transform:translate3d(0,0,0) scale(1) rotate(0deg); }
 }
-
-
-
+@keyframes legustePizzaPequenaMobile {
+0% { opacity:0; transform:translate3d(-220px,0,0) scale(.10) rotate(-180deg); }
+20% { opacity:.35; transform:translate3d(-180px,0,0) scale(.25) rotate(-145deg); }
+45% { opacity:.68; transform:translate3d(-120px,0,0) scale(.50) rotate(-100deg); }
+70% { opacity:.88; transform:translate3d(-60px,0,0) scale(.75) rotate(-55deg); }
+88% { opacity:.82; transform:translate3d(-20px,0,0) scale(.92) rotate(-20deg); }
+100% { opacity:.92; transform:translate3d(0,0,0) scale(1) rotate(0deg); }
+}
+@media screen and (max-width:760px) {
+.hero .banner .banner__palco { position:absolute!important; display:block!important; visibility:visible!important; opacity:1!important; left:0!important; right:0!important; top:auto!important; bottom:0!important; width:100%!important; height:250px!important; z-index:50!important; overflow:visible!important; pointer-events:none!important; }
+.hero--entra .banner .banner__pizza--frente { position:absolute!important; display:block!important; visibility:visible!important; width:280px!important; height:auto!important; max-width:none!important; left:50%!important; right:auto!important; top:auto!important; bottom:-20px!important; z-index:52!important; opacity:0; animation:legustePizzaGrandeMobile 4.15s linear .72s both!important; }
+.hero--entra .banner .banner__pizza--tras { position:absolute!important; display:block!important; visibility:visible!important; width:138px!important; height:auto!important; max-width:none!important; left:8px!important; right:auto!important; top:10px!important; bottom:auto!important; z-index:51!important; opacity:0; animation:legustePizzaPequenaMobile 4.15s linear .72s both!important; }
+}
