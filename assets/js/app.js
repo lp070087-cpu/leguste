@@ -546,6 +546,30 @@
     setTimeout(function () { window.open(urlGoogle, '_blank', 'noopener'); }, 700);
   });
 
+  /* ------------------------------------- HERO único: entrada coreografada
+     O hero agora é um banner só, então não existe mais carrossel: nada de
+     timer, troca, setas ou indicador. O que sobrou é a ENTRADA — a pizza
+     chega, o selo aparece, o título entra, o texto e as ações em seguida.
+
+     A classe `hero--entra` é ligada DEPOIS do primeiro quadro pintado, de
+     propósito: se o CSS já nascesse com a animação, o navegador a rodaria
+     durante a carga e o visitante perderia o começo dela. Ligando depois,
+     a entrada sempre acontece à vista.
+
+     Em `prefers-reduced-motion` a classe nunca é ligada — e como o estado
+     escondido mora em `.hero--entra`, sem ela TUDO aparece no lugar, parado,
+     sem precisar de `!important` nem de exceção. */
+  var heroEl = $('.hero');
+  if (heroEl && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (window.requestAnimationFrame) {
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () { heroEl.classList.add('hero--entra'); });
+      });
+    } else {
+      heroEl.classList.add('hero--entra');
+    }
+  }
+
   /* ------------------------------------------------------------- INÍCIO */
   if ($('#ano')) $('#ano').textContent = String(new Date().getFullYear());
 
