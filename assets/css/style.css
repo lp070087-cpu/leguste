@@ -1846,3 +1846,14 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .banner__veu { background:linear-gradient(90deg,rgba(8,3,1,.05) 0%,rgba(8,3,1,.18) 38%,rgba(8,3,1,.68) 57%,rgba(8,3,1,.86) 100%) !important; }
 }
 
+
+/* MOBILE HERO - PIZZAS ABAIXO DO CONTEUDO */
+@media (max-width:760px) and (orientation:portrait) {
+  .banner__palco { position:absolute !important; display:block !important; left:0 !important; right:0 !important; top:auto !important; bottom:0 !important; width:100% !important; height:38% !important; overflow:visible !important; z-index:4 !important; pointer-events:none !important; }
+  .banner__pizza { display:block !important; visibility:visible !important; max-width:none !important; }
+  .banner__pizza--frente { position:absolute !important; width:72vw !important; height:auto !important; left:-8vw !important; right:auto !important; top:auto !important; bottom:-7vw !important; z-index:4 !important; }
+  .banner__pizza--tras { position:absolute !important; width:38vw !important; height:auto !important; left:48vw !important; right:auto !important; top:auto !important; bottom:20vw !important; z-index:3 !important; }
+  .hero--entra .banner__pizza--frente { opacity:0; animation:pizzaFrenteFinal 4.15s linear .72s both !important; }
+  .hero--entra .banner__pizza--tras { opacity:0; animation:pizzaTrasFinal 4.15s linear .72s both !important; }
+}
+
