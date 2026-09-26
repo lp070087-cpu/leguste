@@ -1857,3 +1857,12 @@ h3 { font-size: clamp(1.15rem, 2.4vw, 1.6rem); line-height: 1.06; }
   .hero--entra .banner__pizza--tras { opacity:0; animation:pizzaTrasFinal 4.15s linear .72s both !important; }
 }
 
+
+/* DEBUG FINAL MOBILE PIZZAS */
+@media screen and (max-width:760px) {
+.hero .banner .banner__palco{display:block!important;visibility:visible!important;opacity:1!important;position:absolute!important;inset:auto 0 0 0!important;width:100%!important;height:250px!important;z-index:50!important;overflow:visible!important;transform:none!important;}
+.hero .banner .banner__pizza{display:block!important;visibility:visible!important;opacity:1!important;animation:none!important;transition:none!important;filter:none!important;transform:none!important;clip-path:none!important;}
+.hero .banner .banner__pizza--frente{position:absolute!important;display:block!important;visibility:visible!important;opacity:1!important;width:280px!important;height:auto!important;max-width:none!important;left:50%!important;right:auto!important;top:auto!important;bottom:-20px!important;transform:translateX(-50%)!important;z-index:52!important;animation:none!important;}
+.hero .banner .banner__pizza--tras{position:absolute!important;display:block!important;visibility:visible!important;opacity:1!important;width:145px!important;height:auto!important;max-width:none!important;left:auto!important;right:10px!important;top:0!important;bottom:auto!important;transform:none!important;z-index:51!important;animation:none!important;}
+}
+
